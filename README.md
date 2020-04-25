@@ -3,5 +3,6 @@
 
 ## Installation
 <p>Install Below code : </p>
-
+```
   pip install requests
+```
