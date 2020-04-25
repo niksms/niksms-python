@@ -14,14 +14,15 @@ pip install requests
 ```
 import requests 
 
-URL = "http://maps.googleapis.com/maps/api/geocode/json"
+URL = "http://niksms.com/api/SingleSms"
 
-location = "delhi technological university"
-PARAMS = {'address':location} 
+apiKey = "Your ApiKey"
+message = "Yout Text Message To Send"
+PARAMS = {'apiKey': apiKey, 'message': message} 
 
 r = requests.get(url = URL, params = PARAMS) 
 data = r.json() 
-# Comment
+
 latitude = data['results'][0]['geometry']['location']['lat'] 
 longitude = data['results'][0]['geometry']['location']['lng'] 
 formatted_address = data['results'][0]['formatted_address']
