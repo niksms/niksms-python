@@ -21,7 +21,7 @@ PARAMS = {'address':location}
 
 r = requests.get(url = URL, params = PARAMS) 
 data = r.json() 
-
+# Comment
 latitude = data['results'][0]['geometry']['location']['lat'] 
 longitude = data['results'][0]['geometry']['location']['lng'] 
 formatted_address = data['results'][0]['formatted_address']
