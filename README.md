@@ -4,14 +4,14 @@
 ## Installation
 <p>Install Below code : </p>
 
-```
+```python
 pip install requests
 ```
 
 ## Usage
 <p>You can Send Sms using below Code</p>
 
-```
+```python
 import requests 
 
 URL = "http://niksms.com/api/SingleSms"
