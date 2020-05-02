@@ -2,7 +2,7 @@
 <p>Niksms API Client Writen In python</p>
 
 ## Installation
-<p>Install Below code : </p>
+<p>You can install 'request' package from pypi using  below command:</p>
 
 ```python
 pip install requests
