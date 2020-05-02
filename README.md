@@ -10,6 +10,8 @@
 pip install requests
 ```
 ## Usage
+
+### Send Single SMS
 <p>You can Send Single Sms using below Code</p>
 
 ```python
@@ -19,9 +21,38 @@ URL = "http://niksms.com/api/SingleSms"
 
 apiKey = "Your ApiKey"
 message = "Yout Text Message To Send"
-senderNumber = "" # Your private line to send SMS Or Niksms public Line
+senderNumber = "" # Your private line to send SMS Or Niksms public lines
+mobile = "" # reciever phone number
 
-PARAMS = {'apiKey': apiKey, 'message': message, 'senderNumber': senderNumber} 
+PARAMS = {'apiKey': apiKey, 'message': message, 'senderNumber': senderNumber, 'mobile':mobile} 
+
+r = requests.get(url = URL, params = PARAMS) 
+data = r.json() 
+
+if int(data) > 0
+    print('SMS Successfully Sent')
+else
+    print('Can not send Sms')
+
+
+
+```
+
+
+### Send Bulk SMS
+<p>You can Send Bulk Sms using below Code</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/GroupSms"
+
+apiKey = "Your ApiKey"
+message = "Yout Text Message To Send"
+senderNumber = "" # Your private line to send SMS Or Niksms public lines
+mobiles = "" # Recievers phone number sepereated by , (comma)
+
+PARAMS = {'apiKey': apiKey, 'message': message, 'senderNumber': senderNumber, 'mobiles': mobiles} 
 
 r = requests.get(url = URL, params = PARAMS) 
 data = r.json() 
