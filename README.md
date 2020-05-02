@@ -67,9 +67,14 @@ else
 ```
 
 <hr/>
-<div dir='rtl'>
-<h2 style='font-family:"Tahoma"'> راهنمای زبان برنامه نویسی Python</h2>
 
+<div dir='rtl'>
+
+## راهنمای زبان برنامه نویسی Python
+
+<p>شما می توانید با استفاده از سرویس ارسال پیامک <a target='_blank' href='https://niksms.com'>نیک اس ام اس</a> به راختی پیامک های خود را ارسال نمایید.</p>
+
+<p>به همین منظور باید یک جساب کاربری در سایت <a target='_blank' href='https://niksms.com'>نیک اس ام اس</a> ساخته و آن را فعال نمایید.</p>
 
 </div>
 
