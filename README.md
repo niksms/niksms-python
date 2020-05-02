@@ -66,6 +66,114 @@ else
 
 ```
 
+### Send ponit to point SMS
+<p>If you want to send different SMS messages to diffrerent numbers in one reuqest you can use PTPsend method.</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/PtpSms"
+
+apiKey = "Your ApiKey"
+senderNumber = "" # Your private line to send SMS Or Niksms public lines
+mobiles = "" # Recievers phone number sepereated by , (comma)
+messages = "" # Messages sepreated by | (vertical bar)
+
+PARAMS = {'apiKey': apiKey, 'senderNumber': senderNumber,'mobiles': mobiles, 'messages': messages } 
+
+r = requests.get(url = URL, params = PARAMS) 
+data = r.json() 
+
+if int(data) > 0
+    print('SMS Successfully Sent')
+else
+    print('Can not send Sms')
+
+
+
+```
+
+
+### Get Sender Numbers
+<p>If you want to get the list of your private numbers that you use for sending sms, you can use GetSenderNumbers method.</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/GetSenderNumbers"
+
+apiKey = "Your ApiKey"
+
+PARAMS = {'apiKey': apiKey } 
+
+r = requests.get(url = URL, params = PARAMS) 
+listOfNumbers = r.json() 
+
+
+
+```
+
+### Get Credit
+<p>You can get you credit balance with below code.</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/GetCredit"
+
+apiKey = "Your ApiKey"
+
+PARAMS = {'apiKey': apiKey } 
+
+r = requests.get(url = URL, params = PARAMS) 
+yourBalance = r.json() 
+
+
+
+```
+
+### Get Expire Date
+<p>You can get your account expiration date with below code.</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/GetExpireDate"
+
+apiKey = "Your ApiKey"
+
+PARAMS = {'apiKey': apiKey } 
+
+r = requests.get(url = URL, params = PARAMS) 
+expireDate = r.json() 
+
+
+
+```
+
+
+### Get Server time
+<p>You can get nik sms server time using below code.</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/GetServertime"
+
+apiKey = "Your ApiKey"
+
+PARAMS = {'apiKey': apiKey } 
+
+r = requests.get(url = URL, params = PARAMS) 
+expireDate = r.json() 
+
+
+
+```
+
+
+
+
 <hr/>
 
 <div dir='rtl'>
