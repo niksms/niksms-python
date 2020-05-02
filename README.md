@@ -67,9 +67,7 @@ else
 ```
 
 
-<div dir='rtl'>
 # راهنمای زبان برنامه نویسی Python
 
 
 
-</div>
