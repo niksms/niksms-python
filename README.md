@@ -12,7 +12,7 @@ pip install requests
 ## Usage
 
 ### Send Single SMS
-<p>You can Send Single Sms using below Code</p>
+<p>You can Send Single SMS using below Code</p>
 
 ```python
 import requests 
@@ -67,7 +67,7 @@ else
 ```
 
 ### Send point to point SMS
-<p>If you want to send different SMS messages to diffrerent numbers in one reuqest you can use PTPsend method.</p>
+<p>If you want to send different SMS messages to diffrerent numbers in one request you can use PTPsend method.</p>
 
 ```python
 import requests 
@@ -95,7 +95,7 @@ else
 
 
 ### Get Sender Numbers
-<p>If you want to get the list of your private numbers that you use for sending sms, you can use GetSenderNumbers method.</p>
+<p>If you want to get the list of your private numbers that you use for sending SMS, you can use GetSenderNumbers method.</p>
 
 ```python
 import requests 
@@ -153,27 +153,7 @@ expireDate = r.json()
 
 
 ### Get Server time
-<p>You can get nik sms server time using below code.</p>
-
-```python
-import requests 
-
-URL = "http://niksms.com/api/GetServertime"
-
-apiKey = "Your ApiKey"
-
-PARAMS = {'apiKey': apiKey } 
-
-r = requests.get(url = URL, params = PARAMS) 
-expireDate = r.json() 
-
-
-
-```
-
-
-### Get Server time
-<p>You can get nik sms server time using below code.</p>
+<p>You can get nik SMS server time using below code.</p>
 
 ```python
 import requests 
@@ -188,6 +168,83 @@ r = requests.get(url = URL, params = PARAMS)
 serverTime = r.json() 
 
 
+
+```
+
+
+### Get SMS Delivery
+<p>You can get results of sent messages using below code.</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/GetSmsDelivery"
+
+apiKey = "Your ApiKey"
+nikIds = [] # Array of ids related to each SMS that you sent. This Ids has been sent to you as response of sendSingle or group SMS
+
+PARAMS = {'apiKey': apiKey , 'nikIds':nikIds } 
+
+r = requests.get(url = URL, params = PARAMS) 
+arrayOfResult = r.json() 
+
+for result in arrayOfResult:
+    if result == '3'
+        print('sent successfully')
+    else if result == '2' || result == '1'
+        print('waiting to be sent')
+    else
+        print('message not sent')
+
+```
+
+
+### Get SMS Delivery With ClientId
+<p>You can get results of sent messages with ids which you used before, using below code.</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/GetSmsDeliveryWithClientId"
+
+apiKey = "Your ApiKey"
+yourId = [] # Array of ids related to each SMS that you sent. This Ids are numbers which you used in sending SMS.
+
+PARAMS = {'apiKey': apiKey , 'yourId':yourId } 
+
+r = requests.get(url = URL, params = PARAMS) 
+arrayOfResult = r.json() 
+
+for result in arrayOfResult:
+    if result == '3'
+        print('sent successfully')
+    else if result == '2' or result == '1'
+        print('waiting to be sent')
+    else
+        print('message not sent')
+
+```
+
+
+### Get Received Sms
+<p>You can get received SMS to your private line using below code.</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/GetReceivedSms"
+
+apiKey = "Your ApiKey"
+
+PARAMS = {'apiKey': apiKey } 
+
+r = requests.get(url = URL, params = PARAMS) 
+arrayOfResult = r.json() 
+
+for result in arrayOfResult:
+    print('sender number is: ' + result.SenderNumber)
+    print('message is : ' + result.Message)
+    print('receive time is ' + result.ReceiveDate)
 
 ```
 
