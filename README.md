@@ -67,7 +67,7 @@ else
 ```
 
 <hr/>
-<div dir='rtl'>
+<div dir='rtl' style='font-family:Tahoma'>
 <h2> راهنمای زبان برنامه نویسی Python</h2>
 
 
