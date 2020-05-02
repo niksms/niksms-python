@@ -66,7 +66,7 @@ else
 
 ```
 
-### Send ponit to point SMS
+### Send point to point SMS
 <p>If you want to send different SMS messages to diffrerent numbers in one reuqest you can use PTPsend method.</p>
 
 ```python
@@ -166,6 +166,26 @@ PARAMS = {'apiKey': apiKey }
 
 r = requests.get(url = URL, params = PARAMS) 
 expireDate = r.json() 
+
+
+
+```
+
+
+### Get Server time
+<p>You can get nik sms server time using below code.</p>
+
+```python
+import requests 
+
+URL = "http://niksms.com/api/GetServertime"
+
+apiKey = "Your ApiKey"
+
+PARAMS = {'apiKey': apiKey } 
+
+r = requests.get(url = URL, params = PARAMS) 
+serverTime = r.json() 
 
 
 
