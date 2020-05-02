@@ -21,7 +21,7 @@ apiKey = "Your ApiKey"
 message = "Yout Text Message To Send"
 senderNumber = "" # Your private line to send SMS Or Niksms public Line
 
-PARAMS = {'apiKey': apiKey, 'message': message, 'senderNumber': senderNumber,} 
+PARAMS = {'apiKey': apiKey, 'message': message, 'senderNumber': senderNumber} 
 
 r = requests.get(url = URL, params = PARAMS) 
 data = r.json() 
