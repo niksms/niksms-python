@@ -67,8 +67,8 @@ else
 ```
 
 <hr/>
-<div dir='rtl' style='font-family:Tahoma'>
-<h2> راهنمای زبان برنامه نویسی Python</h2>
+<div dir='rtl'>
+<h2 style='font-family:"Tahoma"'> راهنمای زبان برنامه نویسی Python</h2>
 
 
 </div>
