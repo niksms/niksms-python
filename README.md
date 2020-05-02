@@ -1,15 +1,14 @@
 # niksms-python
 <p>Niksms API Client Writen In python</p>
 
+<p>You need to have an active account in <a target='_blank' href='https://niksms.com'>NikSms Website</a></p>
+
 ## Installation
-<p>You can install 'request' package from pypi using  below command:</p>
+<p>You can install 'requests' package from pypi using  below command:</p>
 
 ```python
 pip install requests
 ```
-
-<p>You need to have an active account in <a href='https://niksms.com'>NikSmsWebsite</a></p>
-
 ## Usage
 <p>You can Send Single Sms using below Code</p>
 
