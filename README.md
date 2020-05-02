@@ -26,6 +26,11 @@ PARAMS = {'apiKey': apiKey, 'message': message, 'senderNumber': senderNumber,}
 r = requests.get(url = URL, params = PARAMS) 
 data = r.json() 
 
+if int(data) > 0
+    print('SMS Successfully Sent')
+else
+    print('Can not send Sms')
+
 
 
 ```
