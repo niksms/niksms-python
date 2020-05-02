@@ -8,8 +8,10 @@
 pip install requests
 ```
 
+<p>You need to have an active account in <a href='https://niksms.com'>NikSmsWebsite</a></p>
+
 ## Usage
-<p>You can Send Sms using below Code</p>
+<p>You can Send Single Sms using below Code</p>
 
 ```python
 import requests 
@@ -18,13 +20,13 @@ URL = "http://niksms.com/api/SingleSms"
 
 apiKey = "Your ApiKey"
 message = "Yout Text Message To Send"
-PARAMS = {'apiKey': apiKey, 'message': message} 
+senderNumber = "" # Your private line to send SMS Or Niksms public Line
+
+PARAMS = {'apiKey': apiKey, 'message': message, 'senderNumber': senderNumber,} 
 
 r = requests.get(url = URL, params = PARAMS) 
 data = r.json() 
 
-latitude = data['results'][0]['geometry']['location']['lat'] 
-longitude = data['results'][0]['geometry']['location']['lng'] 
-formatted_address = data['results'][0]['formatted_address']
+
 
 ```
