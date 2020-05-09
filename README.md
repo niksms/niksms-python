@@ -191,7 +191,7 @@ arrayOfResult = r.json()
 for result in arrayOfResult:
     if result == '3'
         print('sent successfully')
-    else if result == '2' || result == '1'
+    else if result == '2' or result == '1'
         print('waiting to be sent')
     else
         print('message not sent')
