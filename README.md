@@ -29,12 +29,10 @@ PARAMS = {'apiKey': apiKey, 'message': message, 'senderNumber': senderNumber, 'm
 r = requests.get(url = URL, params = PARAMS) 
 data = r.json() 
 
-if int(data) > 0
-    print('SMS Successfully Sent')
-else
+if data != '-1':
+    print('SMS Successfully Sent, NikId :' + data )
+else :
     print('Can not send Sms')
-
-
 
 ```
 
@@ -57,9 +55,9 @@ PARAMS = {'apiKey': apiKey, 'message': message, 'senderNumber': senderNumber, 'm
 r = requests.get(url = URL, params = PARAMS) 
 data = r.json() 
 
-if int(data) > 0
-    print('SMS Successfully Sent')
-else
+if data != '-1':
+    print('SMS Successfully Sent, NikId :' + data )
+else :
     print('Can not send Sms')
 
 
@@ -84,9 +82,9 @@ PARAMS = {'apiKey': apiKey, 'senderNumber': senderNumber,'mobiles': mobiles, 'me
 r = requests.get(url = URL, params = PARAMS) 
 data = r.json() 
 
-if int(data) > 0
-    print('SMS Successfully Sent')
-else
+if data != '-1':
+    print('SMS Successfully Sent, NikId :' + data )
+else :
     print('Can not send Sms')
 
 
