@@ -17,7 +17,7 @@ pip install requests
 ```python
 import requests 
 
-URL = "http://niksms.com/api/SingleSms"
+URL = "http://niksms.com/SingleSms"
 
 apiKey = "Your ApiKey"
 message = "Yout Text Message To Send"
@@ -45,7 +45,7 @@ else
 ```python
 import requests 
 
-URL = "http://niksms.com/api/GroupSms"
+URL = "http://niksms.com/GroupSms"
 
 apiKey = "Your ApiKey"
 message = "Yout Text Message To Send"
@@ -72,7 +72,7 @@ else
 ```python
 import requests 
 
-URL = "http://niksms.com/api/PtpSms"
+URL = "http://niksms.com/PtpSms"
 
 apiKey = "Your ApiKey"
 senderNumber = "" # Your private line to send SMS Or Niksms public lines
@@ -100,7 +100,7 @@ else
 ```python
 import requests 
 
-URL = "http://niksms.com/api/GetSenderNumbers"
+URL = "http://niksms.com/GetSenderNumbers"
 
 apiKey = "Your ApiKey"
 
@@ -119,7 +119,7 @@ listOfNumbers = r.json()
 ```python
 import requests 
 
-URL = "http://niksms.com/api/GetCredit"
+URL = "http://niksms.com/GetCredit"
 
 apiKey = "Your ApiKey"
 
@@ -138,7 +138,7 @@ yourBalance = r.json()
 ```python
 import requests 
 
-URL = "http://niksms.com/api/GetExpireDate"
+URL = "http://niksms.com/GetExpireDate"
 
 apiKey = "Your ApiKey"
 
@@ -158,7 +158,7 @@ expireDate = r.json()
 ```python
 import requests 
 
-URL = "http://niksms.com/api/GetServertime"
+URL = "http://niksms.com/GetServertime"
 
 apiKey = "Your ApiKey"
 
@@ -178,7 +178,7 @@ serverTime = r.json()
 ```python
 import requests 
 
-URL = "http://niksms.com/api/GetSmsDelivery"
+URL = "http://niksms.com/GetSmsDelivery"
 
 apiKey = "Your ApiKey"
 nikIds = [] # Array of ids related to each SMS that you sent. This Ids has been sent to you as response of sendSingle or group SMS
@@ -205,7 +205,7 @@ for result in arrayOfResult:
 ```python
 import requests 
 
-URL = "http://niksms.com/api/GetSmsDeliveryWithClientId"
+URL = "http://niksms.com/GetSmsDeliveryWithClientId"
 
 apiKey = "Your ApiKey"
 yourId = [] # Array of ids related to each SMS that you sent. This Ids are numbers which you used in sending SMS.
@@ -233,7 +233,7 @@ for result in arrayOfResult:
 ```python
 import requests 
 
-URL = "http://niksms.com/api/GetReceivedSms"
+URL = "http://niksms.com/GetReceivedSms"
 
 apiKey = "Your ApiKey"
 
